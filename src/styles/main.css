@@ -1,0 +1,83 @@
+main {
+  padding: 2rem;
+  text-align: center;
+}
+/* PROJECTS SECTION */
+#projects {
+  padding: 3rem 2rem;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* GRID LAYOUT */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE */
+.project-image {
+  height: 180px;
+  background: #cbd5e1; /* placeholder color */
+}
+
+/* TEXT */
+.project-text {
+  padding: 1rem;
+}
+
+.project-text h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-text p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-image{
+  color: black;
+}
+.project-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+h3,p{
+  color: black;
+}
+.white {
+  color: white;
+}

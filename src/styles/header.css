@@ -1,0 +1,110 @@
+/* HEADER */
+header {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+
+  background: linear-gradient(
+    162deg,
+    #0f172a 50%,
+    #1e293b 50%
+  );
+}
+
+/* IMAGE COLUMN */
+#header-content {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE FRAME */
+#header-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+#header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+}
+
+/* NAME OVERLAY */
+#header-image .image-name {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* TEXT COLUMN */
+.header-text {
+  flex: 1;
+  padding: 2rem;
+  text-align: justify;
+}
+
+/* ================================================= */
+/* 🔹 TABLET: TEXT FLOWS AROUND + UNDER IMAGE 🔹 */
+/* ================================================= */
+
+@media (max-width: 1000px) and (min-width: 601px) {
+  header {
+    display: block; /* ← temporarily exit flex */
+  }
+
+  #header-content {
+    float: left;            /* ← allow text wrapping */
+    width: 40%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #header-image {
+    shape-outside: polygon(
+      0 0,
+      100% 0,
+      100% 85%,
+      40% 90%,
+      0 100%
+    );
+  }
+
+  .header-text {
+    padding-top: 1rem;
+  }
+}
+
+/* MOBILE STACK (UNCHANGED) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header-content {
+    width: 80%;
+    float: none; /* reset float for safety */
+  }
+
+  .header-text {
+    width: 90%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.about-card-lite {
+  background: #1e293b;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(167, 155, 155, 0.3);
+}
