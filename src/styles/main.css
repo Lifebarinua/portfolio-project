@@ -78,6 +78,7 @@ main {
 h3,p{
   color: black;
 }
-.white {
+.white,
+a {
   color: white;
 }
