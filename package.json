@@ -2,7 +2,7 @@
   "name": "portfolio-project",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://lifebarinua.github.io/portfolio-project",
+  "homepage": "https://Lifebarinua.github.io/portfolio-project",
   "scripts": {
     "start": "webpack serve --open --mode development",
     "build": "webpack --mode production",
